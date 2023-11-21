@@ -6,8 +6,11 @@ import { COLORS } from "../../../constants";
 import NearbyJobCard from "../../common/cards/nearby/NearbyJobCard";
 
 import useFetch from "../../../hook/useFetch";
+import { useRouter } from "expo-router";
 
 const Nearbyjobs = () => {
+  const router = useRouter();
+
   const { data, isLoading, error } = useFetch("search", {
     query: "React developer",
     num_pages: 1,
@@ -32,9 +35,7 @@ const Nearbyjobs = () => {
             <NearbyJobCard
               job={job}
               key={`nearby-job-${job?.job_id}`}
-              handleNavigate={() =>
-                getRouteInfoFromState.push(`/job-details/${jobs.job_id}`)
-              }
+              handleNavigate={() => router.push(`/job-details/${job.job_id}`)}
             />
           ))
         )}
