@@ -5,12 +5,15 @@ import styles from "./tabs.style";
 import { SIZES } from "../../../constants";
 
 const TabButton = ({ name, activeTab, onHandleSearchType }) => (
-  <TouchableOpacity>
-    <Text>{name}</Text>
+  <TouchableOpacity
+    style={styles.btn(name, activeTab)}
+    onPress={onHandleSearchType}
+  >
+    <Text style={styles.btnText(name, activeTab)}>{name}</Text>
   </TouchableOpacity>
 );
 
-const Tabs = ({ tabs, activeTab, setActivateTab }) => {
+const Tabs = ({ tabs, activeTab, setActiveTab }) => {
   return (
     <View style={styles.container}>
       <FlatList
@@ -19,7 +22,7 @@ const Tabs = ({ tabs, activeTab, setActivateTab }) => {
           <TabButton
             name={item}
             activeTab={activeTab}
-            onHandleSearchType={() => setActivateTab(item)}
+            onHandleSearchType={() => setActiveTab(item)}
           />
         )}
         horizontal
