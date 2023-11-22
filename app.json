@@ -7,7 +7,22 @@
     "plugins": [
       "expo-router"
     ],
-    "name": "react_native_job",
-    "slug": "react_native_job"
+    "name": "Job Kitchen",
+    "slug": "Job Kitchen",
+    "splash": {
+      "image": "./assets/splash.png",
+      "backgroundColor": "#ffffff"
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "b96e1a1d-9670-4824-8b4a-6f853bab6359"
+      }
+    },
+    "android": {
+      "package": "com.focusguy.job_kitchen"
+    }
   }
 }

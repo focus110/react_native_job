@@ -1,4 +1,4 @@
-import { Stack, useRouter, useSearchParams } from "expo-router";
+import { Stack, useRouter } from "expo-router";
 import { useCallback, useState } from "react";
 import {
   View,
@@ -19,15 +19,16 @@ import {
 } from "../../components";
 import { COLORS, icons, SIZES } from "../../constants";
 import useFetch from "../../hook/useFetch";
+import { useRoute } from "@react-navigation/native";
 
 const tabs = ["About", "Qualifications", "Responsibilities"];
 
 const JobDetails = () => {
-  const params = useSearchParams();
   const router = useRouter();
+  const route = useRoute();
 
   const { data, isLoading, error, refetch } = useFetch("job-details", {
-    job_id: params.id,
+    job_id: route.params.id,
   });
 
   const [activeTab, setActiveTab] = useState(tabs[0]);
