@@ -13,7 +13,7 @@ import { ScrollView } from "react-native";
 
 const Home = () => {
   const router = useRouter();
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState("developer");
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
       <Stack.Screen
@@ -47,8 +47,8 @@ const Home = () => {
             }}
           />
 
-          <Popularjobs />
-          <Nearbyjobs />
+          <Popularjobs searchTerm={searchTerm} />
+          <Nearbyjobs searchTerm={searchTerm} />
         </View>
       </ScrollView>
     </SafeAreaView>

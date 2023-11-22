@@ -8,7 +8,7 @@ import NearbyJobCard from "../../common/cards/nearby/NearbyJobCard";
 import useFetch from "../../../hook/useFetch";
 import { useRouter } from "expo-router";
 
-const Nearbyjobs = () => {
+const Nearbyjobs = ({ searchTerm }) => {
   const router = useRouter();
 
   const { data, isLoading, error } = useFetch("search", {
@@ -20,7 +20,13 @@ const Nearbyjobs = () => {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Nearby jobs</Text>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            if (searchTerm) {
+              router.push(`/search/${searchTerm}`);
+            }
+          }}
+        >
           <Text style={styles.headerBtn}>Show all</Text>
         </TouchableOpacity>
       </View>

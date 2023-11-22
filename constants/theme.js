@@ -1,7 +1,7 @@
 const COLORS = {
-  primary: "#312651",
+  primary: "#000000",
   secondary: "#444262",
-  tertiary: "#FF7754",
+  tertiary: "#5800ff",
 
   gray: "#83829A",
   gray2: "#C1C0C8",
@@ -42,7 +42,7 @@ const SHADOWS = {
       width: 0,
       height: 2,
     },
-    shadowOpacity: 0.25,
+    shadowOpacity: 0.05,
     shadowRadius: 5.84,
     elevation: 5,
   },

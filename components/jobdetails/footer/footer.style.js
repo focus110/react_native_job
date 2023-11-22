@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
   applyBtn: {
     flex: 1,
-    backgroundColor: "#FE7654",
+    backgroundColor: COLORS.tertiary,
     height: "100%",
     justifyContent: "center",
     alignItems: "center",
@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
     fontSize: SIZES.medium,
     color: COLORS.white,
     fontFamily: FONT.bold,
+    padding: "4%",
   },
 });
 

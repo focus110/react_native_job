@@ -33,7 +33,7 @@ const JobSearch = () => {
         url: `https://jsearch.p.rapidapi.com/search`,
         headers: {
           "X-RapidAPI-Key":
-            "a444083f5bmsh29b5b3930f68b23p134983jsnda41269c3c42",
+            "f391e0f3b9msh2280ae05df3c9dep1cfbecjsn2e64c16bbd64",
           "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
         },
         params: {
@@ -70,8 +70,9 @@ const JobSearch = () => {
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
       <Stack.Screen
         options={{
-          headerStyle: { backgroundColor: COLORS.lightWhite },
+          // headerStyle: { backgroundColor: COLORS.lightWhite },
           headerShadowVisible: false,
+          headerBackVisible: true,
           headerLeft: () => (
             <ScreenHeaderBtn
               iconUrl={icons.left}
